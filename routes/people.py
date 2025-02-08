@@ -29,6 +29,7 @@ def create_person():
 
 @people_bp.route("/people/<string:person_id>", methods=["PUT"])
 def update_person(person_id):
+    # TODO: need to make sure person_id is a valid id and exists
     data = request.json
     if not data:
         return jsonify({"error": "No update data provided"}), 400
@@ -45,6 +46,8 @@ def update_person(person_id):
 
 @people_bp.route("/people/<string:person_id>", methods=["DELETE"])
 def delete_person(person_id):
+    # TODO: need to make sure person_id is a valid id and exists
+
     result = people_collection.delete_one({"_id": ObjectId(person_id)})
 
     if result.deleted_count == 0:
