@@ -1,7 +1,22 @@
 {
-    "executionEnvironments": [
-        {
-            "root": "./"
-        }
-    ]
+  "exclude": [ ".direnv", "__pycache__", "node_modules" ],
+  "venvPath": "/home/solis/.cache/pypoetry/virtualenvs",
+  "venv": "mdbp1-ZbQWHfey-py3.12",
+
+  "reportTypeshedErrors": false,
+  "reportMissingImports": true,
+  "reportMissingTypeStubs": false,
+  "reportIncompatibleVariableOverride": false,
+
+  "executionEnvironments": [
+    {
+      "root": "./",
+      "venv": "/home/solis/.cache/pypoetry/virtualenvs/mdbp1-ZbQWHfey-py3.12",
+      "extraPaths": [
+        "/home/solis/.cache/pypoetry/virtualenvs/mdbp1-ZbQWHfey-py3.12/lib/python3.12/site-packages",
+      ]
+    }
+  ]
 }
+
+
