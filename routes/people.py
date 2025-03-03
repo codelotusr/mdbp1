@@ -8,7 +8,15 @@ people_bp = Blueprint("people", __name__)
 
 @people_bp.route("/people", methods=["GET"])
 def get_people():
-    people = list(people_collection.find({}, {"_id": 0}))
+    people = list(
+        people_collection.find(
+            {}, {"_id": 1, "first_name": 1, "last_name": 1, "roles": 1}
+        )
+    )
+
+    for person in people:
+        person["_id"] = str(person["_id"])
+
     return jsonify(people)
 
 
